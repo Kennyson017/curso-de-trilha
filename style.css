@@ -96,6 +96,7 @@ p.p3 {
   --background-body: #F2F2F2;
   --bg-gradient-home:linear-gradient(to left, rgba(242,242,242,0), rgba(242,242,242,0.0),rgba(242,242,242,1), rgba(242,242,242,1), rgba(242,242,242,1)), url(images/capa\ moto\ teste.jpg); 
   --bg-gradient-home-mob:linear-gradient(to bottom, rgba(242,242,242,0), rgba(242,242,242,0.0),rgba(242,242,242,1), rgba(242,242,242,1), rgba(242,242,242,1)), url(images/capa\ moto\ teste.jpg); 
+  --bg-gradient-home-mob2:linear-gradient(to bottom, rgba(242,242,242,0), rgba(242,242,242,0.0), rgba(242,242,242,1),rgba(242,242,242,1), rgba(242,242,242,1), rgba(242,242,242,1)), url(images/capa\ moto\ teste.jpg); 
   --bg-lead: url(images/shape-seta-divisoria.svg), linear-gradient(to right, #403B00, #8C8635);
   --bg-depoimentos: linear-gradient(to left, rgba(166,90,46,0), rgba(166,90,46,0),rgba(166,90,46,0.75), rgba(166,90,46,1), rgba(166,90,46,1)), url(images/trilheiros.png);
   --bg-depoimentos-mob: linear-gradient(to bottom, rgba(166,90,46,0), rgba(166,90,46,0),rgba(166,90,46,0.75), rgba(166,90,46,1), rgba(166,90,46,1)), url(images/trilheiros-mob.jpg);
@@ -122,6 +123,7 @@ p.p3 {
   --background-body: #A65A2E;
   --bg-gradient-home:linear-gradient(to left, rgba(166,90,46,0), rgba(166,90,46,0), rgba(166,90,46,1), rgba(166,90,46,1), rgba(166,90,46,1), rgba(166,90,46,1)), url(images/capa\ moto\ teste.jpg); 
   --bg-gradient-home-mob:linear-gradient(to bottom, rgba(166,90,46,0), rgba(166,90,46,0), rgba(166,90,46,1), rgba(166,90,46,1), rgba(166,90,46,1)), url(images/capa\ moto\ teste.jpg);
+  --bg-gradient-home-mob2:linear-gradient(to bottom, rgba(166,90,46,0), rgba(166,90,46,0), rgba(166,90,46,1), rgba(166,90,46,1), rgba(166,90,46,1), rgba(166,90,46,1)), url(images/capa\ moto\ teste.jpg);
   --bg-lead: url(images/shape-seta-divisoria-dark.svg), linear-gradient(to right, #403B00, #8C8635);
   --bg-depoimentos: linear-gradient(to left, rgba(242, 167, 102, 0), rgba(242, 167, 102, 0), rgba(242, 167, 102, 0.75), rgba(242, 167, 102, 1), rgba(242, 167, 102, 1)), url(images/trilheiros.png);
   --bg-depoimentos-mob: linear-gradient(to bottom, rgba(242, 167, 102, 0), rgba(242, 167, 102, 0), rgba(242, 167, 102, 0.75), rgba(242, 167, 102, 1), rgba(242, 167, 102, 1)), url(images/trilheiros-mob.jpg);
@@ -211,12 +213,26 @@ main {
   width: 55%;
 }
 
+
 .logo {
   width: 50%;
 }
 
+.dark-mode .logo {
+  display: none; /*Retira o logo claro do dark mode */
+}
+
+.logo-dark{
+  display: none; /*Retira o logo dark do modo claro */
+}
+
+.dark-mode .logo-dark {
+  display: block;  /*Coloca o logo dark do modo dark */
+  width: 50%;
+}
+
 .home-button {
-  margin-left: -6em;
+  width: 100%;
   padding-top: 6em;
 }
 
@@ -252,6 +268,7 @@ main {
 }
 
 .leadbox:hover {
+  scale: 102.5%;
   filter: brightness(1.2);
 }
 
@@ -276,8 +293,10 @@ main {
 .img-curso {
   width: 100%;
   margin: 0 0 0 0;
-  border-radius: 1em;
-  box-shadow: rgba(0, 0, 0, 0.25) 10px 10px 10px 0px;
+}
+
+.img-curso:hover {
+  scale: 105%;
 }
 
 .text-curso {
@@ -338,6 +357,10 @@ main {
   min-height: 3em;
   clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
   -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.bonus-shape:hover {
+  scale: 105%;
 }
 
  /* Estilização de imagem para cada div de bônus*/
@@ -419,6 +442,10 @@ main {
   -webkit-clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
 }
 
+.box-oferta-shape:hover {
+  scale: 105%;
+}
+
   
 .box-oferta-shape-wrapper /* Estilização de de sombra do shape do clip-path */ {
   width: 50%;
@@ -474,7 +501,10 @@ main {
   -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
 
-  
+.garantia-shape:hover {
+  scale: 105%;
+}
+
 .shape-wrapper /* Estilização de de sombra do shape do clip-path */ {
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
 }
@@ -504,6 +534,7 @@ main {
 }
 
 .selo:hover {
+  scale: 105%;
   filter: hue-rotate(30deg);
 }
 
@@ -527,6 +558,11 @@ main {
   margin: 0 1em 0 0; /* Ajuste de Imagem ao Layout */
 }
 
+.img-instrutor:hover {
+  scale: 105%;
+}
+
+
 .text-sobre-mim {
   padding: 0 0 0 2em;
   display: flex;
@@ -548,6 +584,10 @@ main {
   gap: 40px;
 }
 
+.faq-content h1 {
+  text-align: center;
+}
+
 .cta-faq-father {
   padding-top: 2em;
   display: flex;
@@ -567,6 +607,7 @@ main {
 
 .accordion:hover {
   filter: brightness(1.2);
+  scale: 102.5%;
 }
 
 /* Estilizações seção  Footer */
@@ -672,8 +713,6 @@ html, body {
    background: linear-gradient(0deg, #F27F3D, #F2A766);
 }
 
-
-
 @media screen and (max-width: 768px) {
 
   /* Estilizações de texto */
@@ -726,6 +765,11 @@ html, body {
     padding: 10em 0em;
   }
 
+  .button {
+    width: 110%;
+    margin-left: -1em;
+  }
+
   /* Estilizações seção Home */
 
   .home {
@@ -734,17 +778,22 @@ html, body {
   }
   
   .headline {
-    margin-top: 55vh;
+    margin-top: 50vh;
     width: 100%;
     align-items: center;
   }
   
   .logo {
     width: 50%;
+    display: none;
+  }
+
+  .logo-dark {
+    width: 50%;
+    display: block;
   }
   
   .home-button {
-    margin-left: -6em;
     padding-top: 6em;
   }
   
@@ -869,6 +918,48 @@ html, body {
     width: 100%;
   }
 
+
+  .box-oferta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 5em 2em 5em 4em;
+    gap: 2em;
+  }
+
+  .box-oferta h1 {
+    text-align: center;
+  }
+
+    /* Estilizações de Preço do curso */
+
+  .box-oferta .valor {
+  font-size: 3rem;
+  text-decoration: line-through;
+  margin-bottom: -0.5em;
+  }
+
+  .box-oferta .parcelas {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: -0.5em;
+}
+
+  .box-oferta .a-vista {
+  font-size: 2.8rem;
+  }
+
+  .oferta-button {
+  margin-left: -1em;
+  width: 110%;
+  position: relative;
+  }
+
+  .pag {
+  width: 90%;
+  }
+
   /* Estilizações seção Garantia */
   
   .garantia-content-father {
@@ -917,4 +1008,30 @@ html, body {
   .footer-content p {
     text-align: center;
   }
+}
+
+@media screen and (max-width: 527px) {
+
+  .home {
+    background-image: var(--bg-gradient-home-mob2);
+  }
+  
+  .headline {
+    margin-top: 25vh;
+    width: 100%;
+    align-items: center;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+
+  .home {
+    background-image: var(--bg-gradient-home-mob2);
+  }
+  
+  .headline {
+    margin-top: 30vh;
+  }
+  
 }
