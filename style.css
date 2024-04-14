@@ -61,16 +61,6 @@ h4 {
   white-space: wrap;
 }
 
-h5 {
-  font-size: 3.2rem;
-  font-weight: bold;
-  font-family: "play";
-  text-align: justify;
-  margin: 0;
-  padding-top: 1em;
-  white-space: wrap;
-}
-
 p {
   font-size: 2.4rem;
   line-height: auto;
@@ -213,6 +203,15 @@ main {
   width: 55%;
 }
 
+.headline h2 {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-family: "play";
+  text-align: justify;
+  margin: 0;
+  padding-top: 1em;
+  white-space: wrap;
+}
 
 .logo {
   width: 50%;
