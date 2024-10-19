@@ -4,6 +4,10 @@
  "Play" - paragrafos
  */
 
+ * {
+  transition: 0.5s all;
+ }
+
  .trade-winds-regular {
     font-family: "Trade Winds", system-ui;
     font-weight: 400;
